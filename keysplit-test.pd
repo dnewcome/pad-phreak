@@ -1,0 +1,25 @@
+#N canvas 773 22 487 399 10;
+#X obj 138 78 notein;
+#X obj 138 196 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 201 199 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 201 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 138 122 keysplit 65;
+#X obj 264 202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 206 274 noteout 2;
+#X obj 201 159 keysplit 67;
+#X obj 53 225 print;
+#X obj 102 345 noteout 1;
+#X connect 0 0 4 0;
+#X connect 0 1 4 1;
+#X connect 3 0 4 2;
+#X connect 4 0 1 0;
+#X connect 4 0 8 0;
+#X connect 4 0 9 0;
+#X connect 4 1 7 0;
+#X connect 7 0 2 0;
+#X connect 7 0 6 0;
+#X connect 7 1 5 0;

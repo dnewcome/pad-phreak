@@ -1,0 +1,73 @@
+#N canvas 396 37 768 561 10;
+#X obj 163 -9 notein;
+#N canvas 652 257 557 373 split 0;
+#X obj 231 246 outlet ch2;
+#X obj 209 22 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 60 256;
+#X obj 231 151 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 65 256;
+#X obj -49 61 tools/passbetween 60 62;
+#X obj -38 92 tools/passbetween 66 68;
+#X obj 118 63 tools/passbetween 63 65;
+#X obj 157 87 tools/passbetween 69 71;
+#X obj 198 -21 inlet;
+#X obj -35 228 outlet chord;
+#X obj 73 231 outlet arp;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 1 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 9 0;
+#X connect 4 0 8 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 1 0;
+#X restore 164 72 pd split;
+#X obj 221 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 271 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 268 83 learn;
+#X obj 242 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 117 249 tools/set;
+#X obj 75 509 print;
+#X obj 221 152 spigot;
+#X obj 121 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 280 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 117 383 tools/switch_in;
+#X obj 264 351 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 135 310 tools/list_next;
+#X obj 163 32 spigot;
+#X text 114 175 clear;
+#X obj 293 302 f 1;
+#X obj 252 303 f 0;
+#X text 379 32 designed for korg nanopad - right half of controller
+is midi notes for learning chords. The left half is split between top
+and bottom zones - top is for arpeggiator bottom is chords.;
+#X text 298 100 todo: toggle learn mode some other way;
+#X connect 0 0 14 0;
+#X connect 0 1 14 1;
+#X connect 1 0 5 0;
+#X connect 1 0 6 2;
+#X connect 1 1 10 0;
+#X connect 1 2 2 0;
+#X connect 1 2 8 0;
+#X connect 3 0 8 1;
+#X connect 5 0 17 0;
+#X connect 6 0 11 0;
+#X connect 6 0 13 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 1;
+#X connect 10 0 6 2;
+#X connect 10 0 16 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 2;
+#X connect 13 0 11 1;
+#X connect 14 0 1 0;
+#X connect 16 0 12 0;
+#X connect 17 0 12 0;
