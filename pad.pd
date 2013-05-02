@@ -1,0 +1,34 @@
+#N canvas 715 47 509 528 10;
+#X obj 180 -127 inlet x;
+#X obj 235 -127 inlet y;
+#X obj 180 -75 &&;
+#X obj 180 -4 spigot;
+#X obj 105 156 f;
+#X obj 104 186 outlet;
+#X obj 313 -127 r learn;
+#X obj 105 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+127;
+#X obj 180 -40 t f f;
+#X obj 280 -33 r message;
+#X obj 105 65 spigot;
+#X text 179 -151 activation matrix;
+#X obj 276 23 f;
+#X obj 151 18 t f b;
+#X obj 293 107 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X text 233 -49 force ordering here;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 8 0;
+#X connect 3 0 13 0;
+#X connect 4 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 8 1 3 1;
+#X connect 9 0 12 1;
+#X connect 10 0 7 0;
+#X connect 12 0 10 0;
+#X connect 12 0 14 0;
+#X connect 13 0 10 1;
+#X connect 13 1 12 0;
+#X coords 0 -1 1 1 25 25 2 100 100;
